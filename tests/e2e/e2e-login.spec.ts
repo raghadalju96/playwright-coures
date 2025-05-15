@@ -6,7 +6,7 @@ test('Login test nagative case', (async ({ page }) => {
     await page.click('#signin_button')
     await page.fill('#user_login', 'invalid_username')
     await page.fill('#user_password', 'invalid_password')
-    await page.cliclk('input[type="submit"]')
+    await page.click('input[type="submit"]')
 
     const errorMsg = await page.locator('.alert-error')
 
